@@ -1,13 +1,6 @@
 package com.example.service;
 
-import com.arjuna.ats.jbossatx.jta.RecoveryManagerService;
-import com.example.config.MyDataSourceProperties;
-import com.example.datasource.DataSourceUtil;
-import com.example.datasource.SqlSessionUtil;
-import com.example.orm.dao.EntryDao;
-import com.example.orm.one.dao.EntryOneDao;
-import com.example.orm.one.dto.EntryDto;
-import com.example.orm.two.dao.EntryTwoDao;
+import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -15,9 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.transaction.TransactionManager;
-import javax.transaction.xa.XAResource;
-import java.util.List;
+import com.example.datasource.SqlSessionUtil;
+import com.example.orm.dao.EntryDao;
+import com.example.orm.one.dao.EntryOneDao;
+import com.example.orm.one.dto.EntryDto;
+import com.example.orm.two.dao.EntryTwoDao;
 
 @Service
 @Transactional

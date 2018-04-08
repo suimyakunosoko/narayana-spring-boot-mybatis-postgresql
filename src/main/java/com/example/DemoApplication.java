@@ -18,14 +18,6 @@ package com.example;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
-//import org.springframework.boot.jta.narayana.DbcpXADataSourceWrapper;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Import;
-
-import com.example.config.MyDataSourceProperties;
-
-import java.io.Closeable;
 
 @SpringBootApplication
 public class DemoApplication {

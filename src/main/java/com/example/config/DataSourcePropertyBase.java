@@ -598,9 +598,9 @@ public class DataSourcePropertyBase implements Cloneable {
 	@Override
 	public DataSourcePropertyBase clone() {
 		DataSourcePropertyBase cloned = null;
-        /*Objectクラスのcloneメソ�?ド�?�CloneNotSupportedExceptionを投げる可能性がある�?�で、try-catch�?で記述(呼び出し�??に投げても良�?)*/
+        /*Objectクラスのcloneメソ�?ド�?�CloneNotSupportedExceptionを投げる可能性がある�?�で、try-catch�?で記述(呼び出し�??に投げても良�?)*/
         try {
-        	cloned = (DataSourcePropertyBase)super.clone(); //親クラスのcloneメソ�?ドを呼び出�?(親クラスの型で返ってくるので、�?��?自身の型でのキャストを忘れな�?ようにする)
+        	cloned = (DataSourcePropertyBase)super.clone(); //親クラスのcloneメソ�?ドを呼び出�?(親クラスの型で返ってくるので、�?��?自身の型でのキャストを忘れな�?ようにする)
         }catch (Exception e){
             e.printStackTrace();
         }
