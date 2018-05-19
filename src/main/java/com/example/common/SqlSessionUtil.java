@@ -4,6 +4,7 @@ import com.example.config.MyDataBaseProperties;
 import com.example.constance.DataBaseConst;
 import java.util.Objects;
 import javax.sql.DataSource;
+import javax.sql.XADataSource;
 import org.apache.ibatis.mapping.Environment;
 import org.apache.ibatis.session.Configuration;
 import org.apache.ibatis.session.SqlSession;
@@ -50,7 +51,7 @@ public class SqlSessionUtil {
    * @return
    */
   public SqlSessionFactory getSqlSessionFactory(String name, String defBase) {
-    MyDataSource dataSourceprop = this.properties.getProperty(name, defBase).getDetail();
+    XADataSource dataSourceprop = this.properties.getProperty(name, defBase).getDetail();
     DataSource dataSource = DataSourceUtil.getDataSource(dataSourceprop);
 
     TransactionFactory transactionFactory = new JdbcTransactionFactory();

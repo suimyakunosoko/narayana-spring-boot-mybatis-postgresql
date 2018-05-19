@@ -59,7 +59,7 @@ public class MyDataBaseProperties {
     }
     DataBaseProperty prop = DataSourceUtil.fillNullByDefault(defProp, getDefaultProperty());
     prop.setName(name);
-    prop.getDetail().setURL(prop.getDetail().getURL() + name);
+    prop.getDetail().setDatabaseName(prop.getDetail().getDatabaseName() + name);
     return prop;
   }
 

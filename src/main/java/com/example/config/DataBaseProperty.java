@@ -1,6 +1,6 @@
 package com.example.config;
 
-import com.example.common.MyDataSource;
+import com.example.common.MyXaDataSource;
 
 /**
  * DB setting for Mybatis and PostgreSql.
@@ -14,7 +14,7 @@ public class DataBaseProperty {
   private String name;
 
   /** DataSource property. */
-  private MyDataSource detail;
+  private MyXaDataSource detail;
 
   public String getName() {
     return this.name;
@@ -24,11 +24,11 @@ public class DataBaseProperty {
     this.name = name;
   }
 
-  public MyDataSource getDetail() {
+  public MyXaDataSource getDetail() {
     return this.detail;
   }
 
-  public void setDetail(MyDataSource detail) {
+  public void setDetail(MyXaDataSource detail) {
     this.detail = detail;
   }
 }

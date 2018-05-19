@@ -7,7 +7,6 @@ import java.util.Collection;
 import java.util.Objects;
 import javax.sql.DataSource;
 import javax.sql.XADataSource;
-import org.springframework.boot.jta.narayana.NarayanaDataSourceBean;
 
 public class DataSourceUtil {
 
@@ -17,9 +16,9 @@ public class DataSourceUtil {
    * @param baseDatasource baseDatasource
    * @return
    */
-  public static DataSource getDataSource(MyDataSource baseDatasource) {
-    XADataSource xaDataSource = getXaDataSource(baseDatasource);
-    NarayanaDataSourceBean dataSource = new NarayanaDataSourceBean(xaDataSource);
+  public static DataSource getDataSource(XADataSource baseDatasource) {
+    MyXaDataSource xaDataSource = getXaDataSource(baseDatasource);
+    MyNarayanaDataSourceBean dataSource = new MyNarayanaDataSourceBean(xaDataSource);
     return dataSource;
   }
 
@@ -29,10 +28,9 @@ public class DataSourceUtil {
    * @param baseDatasource baseDatasource
    * @return
    */
-  public static MyXaDataSource getXaDataSource(MyDataSource baseDatasource) {
-    MyXaDataSource datasource = new MyXaDataSource();
-
-    return DataSourceUtil.fillNullByDefault(baseDatasource, datasource, MyXaDataSource.class);
+  public static MyXaDataSource getXaDataSource(XADataSource baseDatasource) {
+    return DataSourceUtil.fillNullByDefault(baseDatasource, new MyXaDataSource(),
+        MyXaDataSource.class);
   }
 
   /**
