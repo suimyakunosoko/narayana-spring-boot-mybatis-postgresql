@@ -5,7 +5,7 @@ spring:
       enabled: true
       queues: quickstart-messages
       persistent: true
-
+      
   datasource: 
     url: jdbc:h2:file:./target/quickstart-database
     jpa:
@@ -17,16 +17,22 @@ spring:
     narayana:
       periodic-recovery-period: 2
       recovery-backoff-period: 1
-
+      default-timeout: -1
+        
 my:
   datasources:
-    url: jdbc:postgresql://localhost:5432/
-    user: postgres
-    password: postgres
+    default-property:
+      detail:
+        url: jdbc:postgresql://localhost:5432/
+        user: postgres
+        password: postgres
     list:
     - name: datasourceOne
-      url: jdbc:postgresql://localhost:5432/databaseOne
+      detail:
+        url: jdbc:postgresql://localhost:5432/databaseOne
     - name: datasourceTwo
-      url: jdbc:postgresql://localhost:5432/databaseTwo
+      detail:
+        url: jdbc:postgresql://localhost:5432/databaseTwo
     - name: datasource
-      url: jdbc:postgresql://localhost:5432/database
+      detail:
+        url: jdbc:postgresql://localhost:5432/database

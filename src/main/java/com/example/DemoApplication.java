@@ -14,6 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.example;
 
 import org.springframework.boot.SpringApplication;
@@ -22,10 +23,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class DemoApplication {
 
-    public static final Object TO_WAIT = new Object();
+  public static final Object TO_WAIT = new Object();
 
-    public static void main(String[] args) throws Exception {
-        SpringApplication.run(DemoApplication.class, args);
-    }
+  public static void main(String[] args) throws Exception {
+    SpringApplication.run(DemoApplication.class, args);
+  }
 
 }
