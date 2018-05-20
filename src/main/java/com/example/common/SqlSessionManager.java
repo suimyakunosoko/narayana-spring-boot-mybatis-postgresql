@@ -10,10 +10,6 @@ import org.springframework.stereotype.Component;
 public class SqlSessionManager {
   ThreadLocal<Map<String, SqlSession>> sessionMap = new ThreadLocal<>();
 
-  public SqlSessionManager() {
-    init();
-  }
-
   /**
    * put SqlSession.
    * 

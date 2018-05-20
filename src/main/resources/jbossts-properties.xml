@@ -2,7 +2,7 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
     <!-- (default is YES) -->
-    <!-- (twoPhaseCommit is NO( -->
+    <!-- (twoPhaseCommit is NO) -->
     <entry key="CoordinatorEnvironmentBean.commitOnePhase">NO</entry>
     
     <!-- (Must be unique across all Arjuna instances.) -->

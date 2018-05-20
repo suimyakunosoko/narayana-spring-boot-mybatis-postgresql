@@ -8,7 +8,7 @@ import java.util.Properties;
 import org.springframework.boot.jta.narayana.NarayanaDataSourceBean;
 
 /**
- * Wrap NarayanaDataSourceBean for ConnectionManager and enable TransactionalDriverProperties.
+ * Extends NarayanaDataSourceBean for ConnectionManager and enable TransactionalDriverProperties.
  * 
  * @author suimyakunosoko
  *

@@ -4,7 +4,7 @@ import java.util.Objects;
 import org.postgresql.xa.PGXADataSource;
 
 /**
- * Wrap PGXADataSource for TransactionalDriver.
+ * Extends PGXADataSource for TransactionalDriver.
  * 
  * @author suimyakunosoko
  *
